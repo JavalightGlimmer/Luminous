@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="260.0" fitWidth="263.0" layoutX="14.0" layoutY="14.0">
+         <image>
+            <Image url="@../img/小刘鸭凝视.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="222.0" fitWidth="343.0" layoutX="277.0">
+         <image>
+            <Image url="@../img/聊天气泡.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="325.0" layoutY="24.0" text="这小子又不看使用说明&#10;真想从屏幕里钻出来给&#10;ta一拳啊">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="195.0" prefHeight="450.0" prefWidth="703.0" text="                                                           使用说明：&#10;      1. 本软件基础功能有俩，一个是处理循环拉伸数据，可以将给定文件夹下的所有拉伸数&#10;据表格的应力应变数据进行处理，并追加在原有数据后两列（这意味着同一个文件反复处&#10;理的话会数据越来越多，执行越来越慢），并且会将一个试验中多次循环后的所有数据都&#10;写入到一个名为“_result_.csv”的文件中【可选功能，默认勾选，执行耗时】。第二个功能&#10;是处理应力松弛的流变数据，会选择最接近【1】的时间对应的模量作为基准，并将所有模&#10;量值除以基准得到结果，将时间和得到的结果两列数据填在原始数据表最后（这个不是追&#10;加多次执行不会影响执行速度），同时可以将作为基准的数据标红。&#10;       2.将文件夹拖入到窗口会自动识别文件路径&#10;       3.若执行错误，报错界面会有对应错误文件的超链接&#10;                                                            注意事项：&#10;      1.具有文件命名规范：循环拉伸的含有”试验运行“字样的文件夹不允许修改名称，机器&#10;导出的报告与该文件夹放在同一目录下，且该目录下只能有除1个.xlsx文件。也就是说一个&#10;文件夹里只能有1个”试验运行”文件夹和1个机器生成的xlsx格式的报告。上级文件夹命名不&#10;要带有特殊字符：最好不要使用”-“命名文件夹，建议改用”_“；&#10;      2.应力松弛的数据文件命名不允许带有特殊符号:除【数字、字母、_、$】四种以外均不&#10;合规，“-”可能会导致执行错误。存放应力松弛数据的文件夹下，只允许有原始数据的.xls文&#10;件，不允许有闲杂xls文件，其余类型的文件随意，比如“.xlsx&quot;格式也不影响。&#10;                                    更详细的图形说明见使用说明的word文档。&#10;" />
+   </children>
+</AnchorPane>

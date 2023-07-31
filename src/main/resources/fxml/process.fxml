@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="144.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="77.0" layoutY="25.0" prefHeight="47.0" prefWidth="192.0" text="处理中……">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="88.0" prefHeight="56.0" prefWidth="269.0" text="1.处理结束后本窗口会自动关闭&#10;2.此窗口未自动关闭说明出现异常" />
+   </children>
+</AnchorPane>

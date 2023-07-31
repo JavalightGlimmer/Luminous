@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ThankUController">
+   <children>
+      <Label layoutX="52.0" prefHeight="131.0" prefWidth="470.0" text="感觉本软件还不错的话……&#10;可以支持下作者吗？OVO">
+         <font>
+            <Font name="System Bold Italic" size="34.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="hyperlink" layoutX="52.0" layoutY="200.0" onAction="#openWeb" prefHeight="72.0" prefWidth="312.0" text="https://leetcode.cn/app/invite-friends&#10;/share/elated-eulerh0b/5b2a0fb0-40&#10;a8-4d05-8dd6-859cd3034fac/" underline="true" visited="true" />
+      <Label layoutX="14.0" layoutY="111.0" prefHeight="96.0" prefWidth="364.0" text="点击下方超链接，完成任务可以给作者&#10;加50积分，不想搞的话可以背地里夸我&#10;来支持我">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="267.0" prefHeight="96.0" prefWidth="504.0" text="问题反馈或者想要当面夸奖作者请发送指定邮箱：&#10;                      980624557@qq.com" textFill="#0910ee">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="170.0" fitWidth="180.0" layoutX="375.0" layoutY="111.0">
+         <image>
+            <Image url="@../img/小刘鸭开心.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="85.0" layoutY="461.0" prefHeight="27.0" prefWidth="413.0" text="特别鸣谢小刘艺提供的想法和数据支持">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.8669950738916257" endY="0.7733990147783252" startX="0.3103448275862069" startY="1.0">
+               <stops>
+                  <Stop color="#2a7a38c4" />
+                  <Stop color="#2a7a38c4" offset="0.005813953488372093" />
+                  <Stop color="#ffa400a8" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="35.0" layoutY="351.0" text="更新后下载地址(也可能不会更新(-  -)……))" />
+      <Hyperlink fx:id="downloadPath1" layoutX="52.0" layoutY="383.0" onAction="#openGitee" prefHeight="32.0" prefWidth="459.0" text="https://gitee.com/tie-niu-lin/luminous" />
+      <Hyperlink fx:id="downloadPath2" layoutX="52.0" layoutY="415.0" onAction="#openGithub" prefHeight="32.0" prefWidth="497.0" text="https://github.com/JavalightGlimmer/Luminous" />
+   </children>
+</AnchorPane>

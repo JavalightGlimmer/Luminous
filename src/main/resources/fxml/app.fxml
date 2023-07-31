@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="314.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../img/小刘鸭祈祷.jpeg" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="欢迎使用循环拉伸与应力松弛数据处理软件" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="144.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.36018957345971564">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3700000047683716" green="0.1487399935722351" blue="0.08139999955892563" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.29120001196861267" green="0.04800000041723251" blue="0.9599999785423279" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="cs" layoutX="45.0" layoutY="71.0" mnemonicParsing="false" onAction="#cyclicStretching" prefHeight="35.0" prefWidth="81.0" text="循环拉伸" />
+      <Button fx:id="sr" layoutX="197.0" layoutY="71.0" mnemonicParsing="false" onAction="#stressRelaxation" prefHeight="35.0" prefWidth="81.0" text="应力松弛" />
+      <Button fx:id="intro" layoutX="45.0" layoutY="130.0" mnemonicParsing="false" onAction="#introduction" prefHeight="35.0" prefWidth="81.0" text="使用说明" />
+      <Button fx:id="support" layoutX="197.0" layoutY="130.0" mnemonicParsing="false" onAction="#thankU" prefHeight="35.0" prefWidth="81.0" text="支持作者" />
+   </children>
+</AnchorPane>
