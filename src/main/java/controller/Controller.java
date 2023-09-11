@@ -1,12 +1,12 @@
 package controller;
-import javafx.application.Platform;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-
 import util.PaneShow;
 
 //aim to show the Panel
 public class Controller {
+
 
     @FXML
     void cyclicStretching(ActionEvent event) {
@@ -35,9 +35,4 @@ public class Controller {
         String title = "谢谢侬哇";
         PaneShow.initPane(path, title).show();
     }
-    @FXML
-    public void platformExitButtonOnMouseClicked() {
-        Platform.exit();
-    }
-
 }
