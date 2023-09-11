@@ -1,6 +1,7 @@
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,12 +15,16 @@ import util.PaneShow;
 import java.io.IOException;
 
 public class Luminous extends Application {
+
+
+
     public static void main(String[] args) {
-        PaneShow.flashScreen();
         Application.launch(args);
     }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
+        PaneShow.flashScreen();//不放在start中可能会出现Platform类未初始化成功报错
         initial(primaryStage);
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(0.5), event -> {
             primaryStage.show();
@@ -27,6 +32,7 @@ public class Luminous extends Application {
         timeline.setCycleCount(1);
         timeline.play();
     }
+
     //inital the primaryStage
     public void initial(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("fxml/app.fxml"));

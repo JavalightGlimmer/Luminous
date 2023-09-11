@@ -24,8 +24,8 @@ import java.net.URL;
 
 
 public class PaneShow {
-//    initial all kind of windows
-    public static Stage initPane(String path, String title){
+    //    initial all kind of windows
+    public static Stage initPane(String path, String title) {
         AnchorPane pane = null;
         System.out.println(path);
         URL url = PaneShow.class.getResource(path);
@@ -41,8 +41,8 @@ public class PaneShow {
         return stage;
     }
 
-//  show the wrong Information
-    public static Stage initWrongPane(String path, String info, String wrongFilePath){
+    //  show the wrong Information
+    public static Stage initWrongPane(String path, String info, String wrongFilePath) {
         AnchorPane pane = null;
         URL url = PaneShow.class.getResource(path);
         try {
@@ -67,14 +67,14 @@ public class PaneShow {
                 e.printStackTrace();
             }
         });
-        if (!"".equals(info)){
+        if (!"".equals(info)) {
             textArea.setText(info);
         }
         stage.setScene(new Scene(pane));
         return stage;
     }
 
-    public static Stage initWrongPane(String path, String info){
+    public static Stage initWrongPane(String path, String info) {
         AnchorPane pane = null;
         URL url = PaneShow.class.getResource(path);
         try {
@@ -88,7 +88,7 @@ public class PaneShow {
         TextArea textArea = (TextArea) pane.lookup("#wrongInfo");
         textArea.setText(info);
         textArea.setWrapText(true);
-        if (!"".equals(info)){
+        if (!"".equals(info)) {
             textArea.setText(info);
         }
         stage.setScene(new Scene(pane));
@@ -101,7 +101,8 @@ public class PaneShow {
     static double y1;
     static double x_stage;
     static double y_stage;
-    public static void setMove(Stage stage, Scene scene){
+
+    public static void setMove(Stage stage, Scene scene) {
         scene.setOnMouseDragged(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent m) {
@@ -125,7 +126,7 @@ public class PaneShow {
     }
 
     public static void flashScreen() {
-        Platform.runLater(() -> {
+        Platform.runLater(()->{
             Stage ownerStage = new Stage();
             ownerStage.initStyle(StageStyle.UTILITY);
             ownerStage.setOpacity(0);
@@ -156,6 +157,7 @@ public class PaneShow {
             stage.setAlwaysOnTop(true);
             stage.show();
         });
+
     }
 
 }
