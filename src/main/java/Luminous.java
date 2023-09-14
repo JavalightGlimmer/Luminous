@@ -16,8 +16,6 @@ import java.io.IOException;
 
 public class Luminous extends Application {
 
-
-
     public static void main(String[] args) {
         Application.launch(args);
     }

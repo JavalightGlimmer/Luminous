@@ -1,5 +1,7 @@
 package util;
 
+import sun.nio.cs.ext.GBK;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -111,7 +113,7 @@ public class Csv_or_Txt_Hanlder {
                 output += line + "\r\n";
             }
             reader.close();
-            BufferedWriter writer = new BufferedWriter(new FileWriter(path));
+            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(path));
             writer.write(output);
             writer.flush();
             writer.close();

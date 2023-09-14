@@ -36,3 +36,5 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/src/main/resources/testData/0.4不同应变/
+/src/main/resources/testData/0.5-不同应便/
