@@ -1,6 +1,5 @@
 package controller;
 
-import com.sun.org.apache.regexp.internal.RE;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.RadioButton;
@@ -14,7 +13,6 @@ import util.Csv_or_Txt_Hanlder;
 import util.PaneShow;
 import util.XlsxHandler;
 
-import java.awt.image.Kernel;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -200,6 +198,8 @@ public class CsController {
             for (String val : vals) {
                 HashMap<String, ArrayList<String>> pairs = sortCsvFiles(key + "\\" + val);
                 String separator = "";//reset for different directories
+                //相同应变一个文件夹下有多对数据
+                int locationCOl = 0;
                 for (ArrayList<String> pair : pairs.values()) {
                     tmpStage.show();
                     ArrayList<Double> stress1 = null;
@@ -263,8 +263,8 @@ public class CsController {
                             Csv_or_Txt_Hanlder.writeCell(resultPath, 0, "," + head, ",");
                             Csv_or_Txt_Hanlder.writeCell(resultPath, 1, "strain", ",");
                             Csv_or_Txt_Hanlder.writeCell(resultPath, 1, "stress", ",");
-                            Csv_or_Txt_Hanlder.buildRes(resultPath, 2, finStrain, ",");
-                            Csv_or_Txt_Hanlder.buildRes(resultPath, 2, finStress, ",");
+                            Csv_or_Txt_Hanlder.buildRes(resultPath, 2, locationCOl++, finStrain, ",");
+                            Csv_or_Txt_Hanlder.buildRes(resultPath, 2,locationCOl++, finStress, ",");
                         }
                     }
                     tmpStage.close();
@@ -294,6 +294,8 @@ public class CsController {
                 thick = XlsxHandler.readCell(propFile, 30, 4);
                 gauge = XlsxHandler.readCell(propFile, 54 + (testSize - 1) * 6, 1);
             }
+            //不同应变下一个文件夹一组数据
+            int locationCol = 0;
             for (String val : vals) {
                 File[] files = new File(key + "\\" + val).listFiles();
                 String separator = "";//reset for different directories
@@ -363,8 +365,8 @@ public class CsController {
                         Csv_or_Txt_Hanlder.writeCell(resultPath, 0, "," + head, ",");
                         Csv_or_Txt_Hanlder.writeCell(resultPath, 1, "strain", ",");
                         Csv_or_Txt_Hanlder.writeCell(resultPath, 1, "stress", ",");
-                        Csv_or_Txt_Hanlder.buildRes(resultPath, 2, finStrain, ",");
-                        Csv_or_Txt_Hanlder.buildRes(resultPath, 2, finStress, ",");
+                        Csv_or_Txt_Hanlder.buildRes(resultPath, 2, locationCol++, finStrain, ",");
+                        Csv_or_Txt_Hanlder.buildRes(resultPath, 2, locationCol++, finStress, ",");
                     }
                 }
                 tmpStage.close();

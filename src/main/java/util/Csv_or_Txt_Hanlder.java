@@ -1,7 +1,5 @@
 package util;
 
-import sun.nio.cs.ext.GBK;
-
 import java.io.*;
 import java.util.ArrayList;
 
@@ -69,7 +67,7 @@ public class Csv_or_Txt_Hanlder {
         }
     }
 
-    public static void buildRes(String path, int beginRow, ArrayList<Double> dataList, String separator) throws Exception {
+    public static void buildRes(String path, int beginRow,int locationCol, ArrayList<Double> dataList, String separator) throws Exception {
         String output = "";
         try {
             BufferedReader reader = new BufferedReader(new FileReader(path));
@@ -78,10 +76,14 @@ public class Csv_or_Txt_Hanlder {
             while ((index++ < beginRow) && (line = reader.readLine()) != null){
                 output += line + "\r\n";
             }
+            String separators = "";
+            for(int i = 0; i <= locationCol; i++){
+                separators += separator;
+            }
             int i = 0;
             while (i < dataList.size()) {
                 line = reader.readLine();
-                output += (line == null ? "" : line) + separator + dataList.get(i++) + "\r\n";
+                output += (line == null ? ""+separators : line + separator) + dataList.get(i++) + "\r\n";
             }
             reader.close();
             BufferedWriter writer = new BufferedWriter(new FileWriter(path));
